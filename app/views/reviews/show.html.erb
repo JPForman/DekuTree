@@ -2,6 +2,7 @@
 <h2>Review Headline: <%= @review.title %></h2>
 <h3>Author: <%= @review.author %></h3>
 <h3>Review: <%= @review.content_body %></h3>
+
 <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
 <p><%= link_to "Delete review", product_review_path(@product, @review),
                         :data => {:confirm => "Are you sure?",

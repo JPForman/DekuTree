@@ -21,6 +21,12 @@ class ReviewsController < ApplicationController
     render :show
   end
 
+  def edit
+    @product = Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+    render :edit
+  end
+
   def update
   @review = Review.find(params[:id])
   if @review.update(review_params)
