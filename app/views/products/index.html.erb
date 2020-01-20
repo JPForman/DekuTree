@@ -23,11 +23,11 @@
 <h3>Here are our three most recently added products</h3>
 
 <% if Product.three_most_recent.any? %>
-  <ul>
-    <% Product.three_most_recent.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% Product.three_most_recent.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
 <% else %>
 <p>For some reason there are not three most recently added projects???</p>
 <% end %>
@@ -35,11 +35,14 @@
 <h3>Here are our that were made in the USA</h3>
 
 <% if Product.usa.any? %>
-  <ul>
-    <% Product.usa.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% Product.usa.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
 <% else %>
 <p>We don't seem to have any products made in the USA. Sorry about that.</p>
 <% end %>
+
+<h3>And here is our most reviewed product:</h3>
+  <%= link_to Product.most_reviewed[0].name, product_path(Product.most_reviewed[0]) %>
