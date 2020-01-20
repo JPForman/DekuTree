@@ -6,13 +6,13 @@
 <h1>Available Products</h1>
 
 <% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
 <% else %>
-  <p>There are no products available :(</p>
+<p>There are no products available :(</p>
 <% end %>
 
 
@@ -22,4 +22,12 @@
 
 <h3>Here are our three most recently added products</h3>
 
-<p><%= Product.three_most_recent %></p>
+<% if Product.three_most_recent.any? %>
+  <ul>
+    <% Product.three_most_recent.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+<p>For some reason there are not three most recently added projects???</p>
+<% end %>
