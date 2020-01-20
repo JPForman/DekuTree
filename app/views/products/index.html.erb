@@ -31,3 +31,15 @@
 <% else %>
 <p>For some reason there are not three most recently added projects???</p>
 <% end %>
+
+<h3>Here are our that were made in the USA</h3>
+
+<% if Product.usa.any? %>
+  <ul>
+    <% Product.usa.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+<p>We don't seem to have any products made in the USA. Sorry about that.</p>
+<% end %>
