@@ -42,7 +42,9 @@ _Ruby, Sonatra, rspec, PostgreSQL_
 
 
 ### Known Bugs
-_needs styling_  
+_needs styling_
+_needs more thorough testing_
+_cost display needs another decimal place_  
 
 ### License
 
