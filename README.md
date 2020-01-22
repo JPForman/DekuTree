@@ -1,24 +1,51 @@
-# README
+# _Luigi's Grub Reviews_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### A program for tracking products and their reviews.
 
-Things you may want to cover:
+###### By Joshua Forman
 
-* Ruby version
+## Description
 
-* System dependencies
+_This program is designed for the user to be able to input new products, input new reviews for any product, update both products and reviews, and delete any products or reviews. This was completed in Ruby with Rails and ActiveRecord._
 
-* Configuration
 
-* Database creation
+## Specs
 
-* Database initialization
+1. _Full CRUD functionality for products._
 
-* How to run the test suite
+2. _Full CRUD functionality for reviews._
 
-* Services (job queues, cache servers, search engines, etc.)
+3. _Routing for a one to many relationship._
 
-* Deployment instructions
+4. _GUI for input and print of key elements._
 
-* ...
+_(for more detailed specs, see included specs files)_
+
+## Setup
+
+_Using command line:_
+* _$ git clone https://github.com/JPForman/Luigis-Grub-Reviews.git
+* _$ bundle install_
+* _$ rake db:create_
+* _$ rake db:test:prepare_
+* _$ rake db:migrate_
+* _$ rails s_
+* _navigate to your browser and go to localhost:3000_
+
+## Support and contact details
+
+_Email: [cyborgforman@gmail.com](mailto:cyborgforman@gmail.com)_
+
+## Technologies Used
+
+_Ruby, Sonatra, rspec, PostgreSQL_
+
+
+### Known Bugs
+_needs styling_  
+
+### License
+
+*MIT*
+
+Copyright (c) 2020 **_Joshua Forman_**
