@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :authorize_admin, only: [:destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authorize_admin!
 
   def index
     @products = Product.all
