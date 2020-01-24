@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
+
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new
@@ -29,21 +32,21 @@ class ReviewsController < ApplicationController
   end
 
   def update
-  @review = Review.find(params[:id])
-  if @review.update(review_params)
-    flash[:notice] = "Review successfully updated!"
-    redirect_to product_path(@review.product)
-  else
-    render :edit
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
+      flash[:notice] = "Review successfully updated!"
+      redirect_to product_path(@review.product)
+    else
+      render :edit
+    end
   end
-end
 
-def destroy
-  @review = Review.find(params[:id])
-  @review.destroy
-  flash[:notice] = "Review successfully destroyed!"
-  redirect_to product_path(@review.product)
-end
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    flash[:notice] = "Review successfully destroyed!"
+    redirect_to product_path(@review.product)
+  end
 
   private
   def review_params
