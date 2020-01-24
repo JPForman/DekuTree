@@ -1,48 +1,54 @@
-<h1>Welcome to Luigi's!</h1>
+<div class="container" id='title_container'>
+  <h1 id="mainTitle">Welcome to Luigi's!</h1>
+</div>
 
-<h2>We got all the best products from around the world! Everything is organic and fair trade. Take a look at the goods we have available, update them, or even leave a review!</h2>
+<div class="container" id="pallete">
+
+  <h2>We got all the best products from around the world! Everything is organic and fair trade. Take a look at the goods we have available, update them, or even leave a review!</h2>
 
 
-<h1>Available Products</h1>
+  <h1>Available Products</h1>
 
-<% if @products.any? %>
-<ul>
-  <% @products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
+  <% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>There are no products available :(</p>
   <% end %>
-</ul>
-<% else %>
-<p>There are no products available :(</p>
-<% end %>
 
 
-<p><%= link_to "Create new product", new_product_path %></p>
+  <p><%= link_to "Create new product", new_product_path %></p>
 
 
 
-<h3>Here are our three most recently added products</h3>
+  <h3>Here are our three most recently added products</h3>
 
-<% if Product.three_most_recent.any? %>
-<ul>
-  <% Product.three_most_recent.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
+  <% if Product.three_most_recent.any? %>
+  <ul>
+    <% Product.three_most_recent.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>For some reason there are not three most recently added projects???</p>
   <% end %>
-</ul>
-<% else %>
-<p>For some reason there are not three most recently added projects???</p>
-<% end %>
 
-<h3>Here are our that were made in the USA</h3>
+  <h3>Here are our that were made in the USA</h3>
 
-<% if Product.usa.any? %>
-<ul>
-  <% Product.usa.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
+  <% if Product.usa.any? %>
+  <ul>
+    <% Product.usa.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>We don't seem to have any products made in the USA. Sorry about that.</p>
   <% end %>
-</ul>
-<% else %>
-<p>We don't seem to have any products made in the USA. Sorry about that.</p>
-<% end %>
 
-<h3>And here is our most reviewed product:</h3>
+  <h3>And here is our most reviewed product:</h3>
   <%= link_to Product.most_reviewed[0].name, product_path(Product.most_reviewed[0]) %>
+
+</div>

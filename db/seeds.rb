@@ -9,7 +9,7 @@
 Product.destroy_all
 
 50.times do |index|
-  Product.create!(name: Faker::Dessert.variety, cost: (rand 1000), country_of_origin: Faker::Address.country)
+  Product.create!(name: Faker::Games::Zelda.item, cost: (rand 1000), country_of_origin: Faker::Address.country)
 
 
 end
