@@ -22,13 +22,28 @@
         <%= "User"  %>
         <% end %>
       <th class="authenticate"><%= link_to "SIGN-OUT", destroy_user_session_path, :method => :delete%></th>
-      <% else %>
+        <% else %>
       <th class="authenticate"><%= link_to "Sign-In/Sign-Up", new_user_session_path%></th>
-      <% end %>
+        <% end %>
     </table>
   </div>
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
-  <%= yield %>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+
+      <div class="container" id="pallete">
+
+        <h2 id="store_info">We have all the best products from around the world! <br>Leave a review about an adventure item you have used, or check out what others have to say!</h2>
+
+        <div class="row container" id="contentRows">
+
+          <div class="col-8 products">
+            <div class="subTitle">
+            <%= yield %>
+          </div>
+            </div>
+          </div>
+        </div>
+
+
 </body>
 </html>
