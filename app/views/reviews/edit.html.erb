@@ -1,5 +1,6 @@
 <h1>Edit review:</h1>
 
+<div class="link">
 
 <%= form_for [@product, @review] do |f| %>
   <%= f.label :title %>
@@ -12,3 +13,4 @@
   <%= f.number_field :rating %>
 <p><%= f.submit %></p>
 <% end %>
+</div>

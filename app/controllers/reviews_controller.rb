@@ -37,6 +37,8 @@ class ReviewsController < ApplicationController
       flash[:notice] = "Review successfully updated!"
       redirect_to product_path(@review.product)
     else
+      flash[:notice] = "Woops, I think you missed a spot :)"
+      @product = Product.find(params[:product_id])
       render :edit
     end
   end
