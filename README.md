@@ -8,7 +8,7 @@
 
 _This program is designed for the user to be able to input new products, input new reviews for any product, update both products and reviews, and delete any products or reviews. This was completed in Ruby with Rails and ActiveRecord._  
 
-_NOTE: Admin permissions can only be added outside of the program._
+_NOTE: Admin permissions can only be added outside of the program. _
 
 
 ## Specs

@@ -8,6 +8,10 @@
 
 Product.destroy_all
 
+User.create!(email: "epicodusAdmin@epicodus.com", admin: true, password: 123456)
+User.create!(email: "epicodusUser@epicodus.com", admin: false, password: 123456)
+
+
 50.times do |index|
   Product.create!(name: Faker::Games::Zelda.item, cost: (rand 1000), country_of_origin: Faker::Address.country)
 
