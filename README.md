@@ -8,7 +8,40 @@
 
 _This program is designed for the user to be able to input new products, input new reviews for any product, update both products and reviews, and delete any products or reviews. This was completed in Ruby with Rails and ActiveRecord._  
 
-_NOTE: Admin permissions can only be added outside of the program. _
+
+
+## Setup
+
+_Using command line:_
+* _$ git clone https://github.com/JPForman/Luigis-Grub-Reviews.git
+* _$ bundle install_
+* _$ rake db:create_
+* _$ rake db:test:prepare_
+* _$ rake db:migrate_
+* _$ rails s_
+* _navigate to your browser and go to localhost:3000_
+
+## Note
+
+_Admin permissions can only be added outside of the program:_
+* In command line while in root project directory:
+* $ rails c
+* IRB: User.create(email: "admin_email@g.com", password: admin_password6charMinInt, admin: "true")
+* _You can check if has been added to the table in psql_
+
+
+
+_A demo admin and user account have been added to the seed with the following authentications:_  
+
+_USER_  
+_email: epicodusUser@epicodus.com_  
+_password: 123456_  
+
+_ADMIN_  
+_email: epicodusAdmin@epicodus.com_  
+_password: 123456_  
+
+
 
 
 ## Specs
@@ -22,17 +55,6 @@ _NOTE: Admin permissions can only be added outside of the program. _
 4. _GUI for input and print of key elements._
 
 _(for more detailed specs, see included specs files)_
-
-## Setup
-
-_Using command line:_
-* _$ git clone https://github.com/JPForman/Luigis-Grub-Reviews.git
-* _$ bundle install_
-* _$ rake db:create_
-* _$ rake db:test:prepare_
-* _$ rake db:migrate_
-* _$ rails s_
-* _navigate to your browser and go to localhost:3000_
 
 ## Support and contact details
 
