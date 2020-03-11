@@ -1,5 +1,22 @@
 {
   "name": "luigis_grub_reviews",
-  "private": true,
-  "dependencies": {}
+  "version": "1.0.0",
+  "description": "#### A program for tracking products and their reviews.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPForman/DekuTree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPForman/DekuTree/issues"
+  },
+  "homepage": "https://github.com/JPForman/DekuTree#readme"
 }
