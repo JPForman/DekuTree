@@ -2,6 +2,9 @@
   "name": "luigis_grub_reviews",
   "version": "1.0.0",
   "description": "#### A program for tracking products and their reviews.",
+  "engines": {
+    "node": "12.13.0"
+  },
   "main": "index.js",
   "directories": {
     "lib": "lib"
