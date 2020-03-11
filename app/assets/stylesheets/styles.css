@@ -16,6 +16,17 @@ body {
 
 }
 
+.flashCard{
+  background-color: white;
+  border: 4px solid #99795C;
+  margin: 5vh;
+  padding: 2px;
+  text-align: center;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  border-radius: 5px;
+}
+
 .link {
   font-size: 20px;
   text-align: left;

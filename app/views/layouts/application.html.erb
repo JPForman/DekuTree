@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LuigisGrubReviews</title>
+  <title>The Deku Tree</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -32,8 +32,14 @@
     <h1 id="title">The Deku Tree!</h1>
   </div>
 
-      <%= flash[:alert] %>
-      <%= flash[:notice] %>
+      <% if(flash[:alert] || flash[:notice]) %>
+        <div class='flashCard'>
+          <%= flash[:alert] %>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+
 
       <div class="container" id="pallete">
 
